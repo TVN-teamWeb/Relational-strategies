@@ -2,14 +2,14 @@
 <div id="fullpage">
   <!-- Sezione autoscroll ON -->
   <div class="section hp" id="section-1">
-    <div class="claim">
+    <div class="claim bounce-in long-delay" id="claim" data-toggler data-animate="scale-in-up">
       <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/claim.png">
     </div>
-    <h1 class="iscrizione">iscrizioni aperte</h1>
+    <!--h1 class="iscrizione">iscrizioni aperte</h1-->
       <!-- button class="draw meet">Draw Meet</button -->
-      <div class="center">
+      <!--div class="center">
         <a class="prova" href="#">cool</a>
-      </div>
+      </div-->
     <!-- div class="sponsor">
       <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/sponsor.png">
     </div -->
@@ -18,7 +18,17 @@
   <div class="section about fp-normal-scroll" id="section-2">
     <div class="sfondo-about">
       <div class="content">
-        <h1 class="text"> Il Premio dedicato alle tecniche più innovative ed efficaci del relational marketing</h1>
+        <h1 class="text"> 
+          <div class="curtain-txt-box">
+            <span class="curtain-txt">Il Premio dedicato alle tecniche</span>
+          </div>
+          <div class="curtain-txt-box delay-2">
+            <span class="curtain-txt">più innovative ed efficaci</span>
+          </div>
+          <div class="curtain-txt-box delay-3">
+            <span class="curtain-txt">del relational marketing</span>
+          </div>
+        </h1>
 
   <p>il Premio dedicato alle tecniche più innovative ed efficaci del relational marketing: 
   <b>digital, DM, PR, digital, events, branded content e promo.</b>
@@ -44,6 +54,7 @@
           <div class="square">
             <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/white.jpg">
             <figure>
+              <div class="curtain"></div>
               <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/giuria01.jpg">
             </figure>
             <p class="title">La giuria</p>
@@ -79,47 +90,27 @@ per lo scrupolo e l’attenzione posti nell’individuare i vincitori di categor
     </div>
     <div class="giudici">
       <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
+        <figure class="img-box">
+            <img class="curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
         </figure>
         <h3>Leo Gullotta</h3>
         <p>Attore: <span>Comico</span></p>
       </div>
       <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
+        <figure class="img-box">
+            <img class="curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
         </figure>
         <h3>Leo Gullotta</h3>
         <p>Attore: <span>Comico</span></p>
       </div>
       <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
+        <figure class="img-box">
+            <img class="curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
         </figure>
         <h3>Leo Gullotta</h3>
         <p>Attore: <span>Comico</span></p>
       </div>
-      <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
-        </figure>
-        <h3>Leo Gullotta</h3>
-        <p>Attore: <span>Comico</span></p>
-      </div>
-      <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
-        </figure>
-        <h3>Leo Gullotta</h3>
-        <p>Attore: <span>Comico</span></p>
-      </div>
-      <div class="box-giuria">
-        <figure>
-          <img class="size" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/box-giuria.jpg">
-        </figure>
-        <h3>Leo Gullotta</h3>
-        <p>Attore: <span>Comico</span></p>
-      </div>
+
       <button type="button" name="button">tutta la giuria</button>
     </div>
   </div>

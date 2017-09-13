@@ -98,6 +98,7 @@ $(window).scroll(function(){
 
 //Full Page jquery effetto slide section
 $(document).ready(function() {
+  $('#claim').foundation('toggle');
   $('#fullpage').fullpage({
     anchors: ['hp','il-premio', 'la-giuria', 'winner', 'winners'],
     sectionsColor: ['#fff','#fff', '#fff', '#282828', '#282828'],

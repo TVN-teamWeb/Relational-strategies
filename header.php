@@ -73,12 +73,7 @@
 <nav id="myNav" class="overlay">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-		<ul>
-			<li><a class="link" href="#"><span>About</span></a></li>
-			<li><a class="link" href="#"><span>About</span></a></li>
-			<li><a class="link" href="#"><span>About</span></a></li>
-			<li><a class="link" href="#"><span>About</span></a></li>
-		</ul>
+		<?php get_template_part( 'template-parts/menu' ); ?>
   </div>
 </nav>
 

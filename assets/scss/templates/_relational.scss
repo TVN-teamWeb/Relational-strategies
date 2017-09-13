@@ -124,9 +124,11 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
 
     span:before {
       left: -2.5px;
+      top: 3.5px;
     }
     span:after {
       right: 2.5px;
+      top: 3.5px;
       background: #fff;
       transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
@@ -200,6 +202,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
       max-width: 2000px;
       padding: 0 2% 0;
       margin: 0 auto;
+      display: none;
       img{
         width: 767px;
         @include breakpoint(small){
@@ -243,6 +246,8 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
       }
     }
     h1.iscrizione{
+      margin-top: 55px;
+      text-transform: uppercase;
       @include breakpoint(small){
         font-size: 1em;
       }
@@ -260,7 +265,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   .section.about{
     .fp-tableCell{
       vertical-align: inherit;
-      background-color: #f1f1f1;
+      background-color: #d0d0d0;
       .sfondo-about{
         background-image: url('../images/bck-about.jpg');
         background-size: cover;
@@ -291,13 +296,13 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                 text-transform: uppercase;
                 font-weight: bold;
                 padding: 0 2%;
-                opacity: 0;
+                /*opacity: 0;
                 transform: translate(80px);
                   -webkit-transform:translate(80px);
                   -moz-transform:translate(80px);
                   -o-transform:translate(80px);
                   -ms-transform:translate(80px);
-                  transition: all 0.4s ease-in-out;
+                  transition: all 0.4s ease-in-out;*/
 
                 @include breakpoint(small) {
                   font-size: 1.4em;
@@ -316,11 +321,11 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                 }
                 &.is-showing{
                   opacity: 1;
-                  transform: translate(0px);
+                  /*transform: translate(0px);
                   -webkit-transform:translate(0px);
                   -moz-transform:translate(0px);
                   -o-transform:translate(0px);
-                  -ms-transform:translate(0px);
+                  -ms-transform:translate(0px);*/
                 }
 
               }
@@ -592,19 +597,20 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
           }
               }
               .giudici{
+                background-color: #d0d0d0;
                 @include grid-row();
                 width: 100%;
                 max-width: 1450px;
                 padding: 5% 5% 7%;
                   .box-giuria{
                     position: relative;
-                    opacity: 0;
-                    transform: translateX(-20px);
+                    overflow: hidden;
+                    /*transform: translateX(-20px);
                     -webkit-transform:translateX(-20px);
                     -moz-transform:translateX(-20px);
                     -o-transform:translateX(-20px);
                     -ms-transform:translateX(-20px);
-                    transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;*/
                   @include breakpoint(small){
                     @include grid-column(12);
                   }
@@ -619,13 +625,32 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
 
                   //Zoom
                   figure{
-                    overflow: hidden;
-                    img{
-                      max-width: 100%;
-                      -moz-transition: all 0.3s;
-                      -webkit-transition: all 0.3s;
-                      transition: all 0.3s;
-                    }
+
+                      img {
+                        width: 100%;
+                        /*transition: all 1s ease-out;*/
+                      }
+                      /*&::after {
+                        content: "";
+                        display: block;
+                        position: relative;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 2;
+                        background-color: rgb(0, 0, 0);
+                        transform: scaleX(1);
+                        transform-origin: right center 0px;
+                        transition-duration: 1s;
+                        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+                        transition-property: transform, -webkit-transform;
+                        transition-delay: 0.4s;
+                      }*/
+
+
+
+
                   }
                   figure:hover img {
                     -webkit-transform: scale(1.1);
@@ -647,14 +672,14 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                       @include breakpoint(small only){text-align: center;}
                       span{font-weight: bold; }
                     }
-                    &.is-showing{
+                    /*&.is-showing{
                       opacity: 1;
                       transform: translateX(0px);
                       -webkit-transform:translateX(0px);
                       -moz-transform:translateX(0px);
                       -o-transform:translateX(0px);
                       -ms-transform:translateX(0px);
-                    }
+                    }*/
                   }
 
                   button{
@@ -714,6 +739,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                 -moz-transform:translateX(0px);
                 -o-transform:translateX(0px);
                 -ms-transform:translateX(0px);
+
               }
             }
             img.foto{
@@ -889,10 +915,10 @@ a.prova{
   width: 20%;
   height: 50px;
   text-align: center;
-  line-height: 50px;
+  line-height: 55px;
   display: inline-block;
   font-size: 1.2em;
-
+  margin-top: 30px;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 
@@ -913,12 +939,13 @@ a.prova:before{
   height: 0;
   background:transparent;
   border: 2px solid transparent;
-  
+
 
 }
 
-a.prova:hover:before{
-  animation: animate 1s linear forwards;
+a.prova.is-active:before{
+  animation: animate 0.5s linear forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes animate
@@ -964,9 +991,9 @@ a.prova:after{
   border: 2px solid transparent;
 }
 
-a.prova:hover:after{
-  animation: animate2 1s linear forwards;
-  animation-delay: 1s;
+a.prova.is-active:after{
+  animation: animate2 0.5s linear forwards;
+  animation-delay: 0.7s;
 }
 
 @keyframes animate2
