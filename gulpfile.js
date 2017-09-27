@@ -23,7 +23,8 @@ var isProduction = !!(argv.production);
 var COMPATIBILITY = [
   'last 2 versions',
   'ie >= 9',
-  'Android >= 2.3'
+  'Android >= 2.3',
+  'ios >= 7'
 ];
 
 // File paths to various assets are defined here.

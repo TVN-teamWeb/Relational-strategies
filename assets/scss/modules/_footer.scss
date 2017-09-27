@@ -7,7 +7,9 @@
 
 
   #footer {
+    width: 80%;
     color: #ffffff;
+    margin-bottom: 0;
     h3{font-size: 1em; text-decoration: none;}
       @include grid-row();
         .footer-colonna {
@@ -18,6 +20,7 @@
           list-style-type: none;
           margin: 0;
           padding: 0;
+          a { color: #fff; }
         }
       }
     }
@@ -31,4 +34,8 @@
   margin: 5% auto;
   text-align: center;
   @include grid-row();
+}
+
+.inverted {
+	filter: invert(100%);
 }

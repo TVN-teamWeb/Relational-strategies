@@ -1,23 +1,38 @@
 html,{margin: 0; padding: 0;}
 body{margin-top: 0;}
-h1,h3{font-family:"Conv_ITCAvantGardeStd-Bold";}
-p,ul,li,span{margin: 0; font-family:"Conv_ITCAvantGardeStd-Bk";}
+h1,h3,h4, h1, .txt-bold {font-family:"Conv_ITCAvantGardeStd-Bold" !important;}
+p,ul,li,span, .txt-std {margin: 0; font-family:"Conv_ITCAvantGardeStd-Bk";}
 ul{list-style: none;}
 button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; text-transform: uppercase; font-weight: bold; font-size: 1em; margin-top: 5%;}
 #menu{
   position: fixed;
-  top: 6%;
+  top: 40px;
   left: 3%;
   z-index: 9998;
   color: #fff;
-    .menu{
-     opacity: 0;
-     font-size: .8em;
-     position: relative;
-     top: -9px;
-     left: 10px;
-     transition: all .2s ease-in-out 0.2s;
-    }
+  font-size: 50px;
+  cursor:pointer;
+
+  .menu {
+   opacity: 0;
+   font-size: 13px;
+   position: relative;
+   top: -9px;
+   left: 10px;
+   transition: all .2s ease-in-out;
+  }
+  @include breakpoint(large) {
+    top: 25px;
+    left: 2%;
+    font-size: 30px;
+  }
+
+  @include breakpoint(medium down) {
+    top: 5px;
+    left: 2%;
+    font-size: 25px;
+  }
+
 }
 #menu:hover .menu{
   opacity: 1;
@@ -29,57 +44,113 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   position: fixed;
   right: 0;
   left: 0;
-  top: 6%;
+
   z-index: 9998;
-  width: 268px;
+
   margin: 0 auto;
   text-align: center;
   transition: all 0.4s ease-in-out;
-  img{
-    @include breakpoint(small){
-      width: 55% !important;
-    }
-    @include breakpoint(medium){
-      width: 80% !important;
-    }
-    @include breakpoint(large){
-      width: 90% !important;
-    }
-    @include breakpoint(xlarge){
-      width: 75% !important;
-    }
-    @include breakpoint(xxlarge){
-      width: 100% !important;
-    }
+  img{ width: 100%; }
+
+  @include breakpoint(large up) {
+    width: 242px;
+    top: 30px;
   }
+
+  @include breakpoint(medium) {
+    width: 217px;
+    top: 15px;
+  }
+
+  @include breakpoint(small only) {
+    width: 120px;
+    top: 10px;
+  }
+
+  @media screen and (max-height: 500px ) and (max-width: medium ) {
+    height: 50px;
+  }
+
 }
+
+
 
 #lingue{
   position: fixed;
-  top: 6%;
+  top: 50px;
   right: 3%;
   z-index: 9998;
   color: #fff;
+  a { color: #fff;
+    font-size: 27px;
+    &.active { font-weight: 900; text-decoration: underline;}
+  }
+  .pipe {
+    width: 24px;
+    font-size: 27px;
+    text-align: center;
+    &:before { content: "|"; }
+  }
+
+  @include breakpoint(xlarge down) {
+    top: 33px;
+    right: 2%;
+    a,.pipe { font-size: 15px; }
+    display: block;
+    font-size: 20px;
+  }
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
+
 }
 
 #mouse{
   position: fixed;
   transition: all 0.4s ease-in-out;
-  width: 100%;
-  bottom: 5%;
   z-index: 9998;
-  left: 49.5%;
-  img{
-    @include breakpoint(landscape only) {
-    width:3%;
-    }
+  left: 50%;
+  width: 26px;
+  bottom: 10px;
+  margin-left: -13px;
 
-    @include breakpoint(medium) {
-    width:2%;
-    }
-    @include breakpoint(xlarge) {
-    width:1.5%;
-    }
+  @include breakpoint(xlarge down) {
+    width: 14px;
+    margin-left: -7px;
+  }
+
+  img { width: 100%; }
+
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
+
+}
+
+#sponsor{
+  position: fixed;
+  transition: all 0.4s ease-in-out;
+  z-index: 9998;
+  left: 50%;
+  margin-left: -125px;
+  width: 250px;
+  bottom: 90px;
+  display: block;
+  @include breakpoint(xlarge down) {
+    width: 180px;
+    margin-left: -90px;
+    bottom: 60px;
+  }
+
+  img { width: 100%; }
+
+  @media screen and (max-height: 500px) {
+    display: none;
   }
 
 }
@@ -91,10 +162,22 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
 #login{
   position: fixed;
   z-index: 9998;
-  top: 63%;
   left: 3%;
   width: 12px;
+  top: 50%;
+  margin-top: 125px;
+  @include breakpoint(xlarge down) {
+    left: 2%;
+    display: block;
+  }
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
+  @include breakpoint(small) {
+    display: none;
+  }
   .vertical-text {
+    text-align: center;
     transform: rotate(-90deg);
     transform-origin: left top 0;
     text-transform: uppercase;
@@ -117,24 +200,19 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
       position: absolute;
       width: 0%;
       height: 2px;
-      top: 50%;
-      margin-top: -0.5px;
       background: #fff;
+      top: 5px;
     }
 
     span:before {
       left: -2.5px;
-      top: 3.5px;
     }
     span:after {
       right: 2.5px;
-      top: 3.5px;
-      background: #fff;
       transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
     span:hover:before {
-      background: #fff;
       width: 100%;
       transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
@@ -156,6 +234,19 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   top: 50%;
   right: 3%;
   width: 12px;
+  text-align: center;
+  margin-top: 125px;
+  display: block;
+  @include breakpoint(xlarge down) {
+    right: 2%;
+    display: block;
+  }
+  @include breakpoint(small) {
+    display: none;
+  }
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
   .vertical-text {
     transform: rotate(-90deg);
     transform-origin: left top 0;
@@ -184,14 +275,19 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   }*/
 }
 
+.dark { color: #000 !important;}
+
 #fullpage{
   z-index: 9997;
+  background-color: #f7f7f7;
   // Prima fascia //
   .section.hp{
     background-image: url('../images/bck-hp.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    //padding-top: 10px;
+    //min-height: 660px;
   }
 
   .section {
@@ -201,49 +297,21 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
       width: 100%;
       max-width: 2000px;
       padding: 0 2% 0;
-      margin: 0 auto;
+      margin: auto;
       display: none;
-      img{
-        width: 767px;
-        @include breakpoint(small){
-          max-width:90%;
-        }
-        @include breakpoint(landscape) {
-          max-width:30%;
-        }
-        @include breakpoint(medium){
-          max-width:85%;
-        }
-        @include breakpoint(large ){
-          max-width:95%;
-        }
-        @include breakpoint(xlarge ){
-          max-width:45%;
-        }
-        @include breakpoint(xxlarge ){
-          max-width:100%;
-        }
+      @media screen and (orientation:portrait) {
+        img { max-height: 30%; }
       }
+      @media screen and (orientation:landscape) {
+        img { width: 55%; }
+       }
+
 
     }
     .sponsor{
-      position: absolute;
-      bottom: 13%;
-      left: 50%;
-      margin-left: -125px;
 
-      img{
-        @include breakpoint(small) {
-        width: 55%;
-        }
-        @include breakpoint(medium) {
-        width: 70%;
-        }
-        @include breakpoint(xxlarge) {
-        width: 100%;
-        }
+      margin: 24px auto;
 
-      }
     }
     h1.iscrizione{
       margin-top: 55px;
@@ -265,7 +333,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   .section.about{
     .fp-tableCell{
       vertical-align: inherit;
-      background-color: #d0d0d0;
+      background-color: #f7f7f7;
       .sfondo-about{
         background-image: url('../images/bck-about.jpg');
         background-size: cover;
@@ -273,9 +341,10 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
         background-position: top;
         .content{
           width: 100%;
-          max-width: 750px;
+          max-width: 800px;
           margin: 0 auto;
-          @include breakpoint(small) {
+          padding: 5% 0 2%;
+          /*@include breakpoint(small) {
             padding: 35% 0 3%;
           }
           @include breakpoint(medium) {
@@ -289,45 +358,35 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
           }
           @include breakpoint(xxlarge) {
             padding: 10% 0 3%;
-          }
+          }*/
 
             h1{
                 color: #ffffff;
                 text-transform: uppercase;
                 font-weight: bold;
                 padding: 0 2%;
-                /*opacity: 0;
-                transform: translate(80px);
-                  -webkit-transform:translate(80px);
-                  -moz-transform:translate(80px);
-                  -o-transform:translate(80px);
-                  -ms-transform:translate(80px);
-                  transition: all 0.4s ease-in-out;*/
+
 
                 @include breakpoint(small) {
                   font-size: 1.4em;
+
                 }
                 @include breakpoint(medium) {
                   font-size: 2.4em;
+
                 }
                 @include breakpoint(large) {
                   font-size: 2.4em;
+
                 }
                 @include breakpoint(xlarge) {
                   font-size: 2.5em;
+
                 }
                 @include breakpoint(xxlarge) {
                   font-size: 3em;
-                }
-                &.is-showing{
-                  opacity: 1;
-                  /*transform: translate(0px);
-                  -webkit-transform:translate(0px);
-                  -moz-transform:translate(0px);
-                  -o-transform:translate(0px);
-                  -ms-transform:translate(0px);*/
-                }
 
+                }
               }
 
           p{
@@ -341,13 +400,13 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
               -ms-transform:translate(-80px);
             transition: all 0.6s ease-in-out;
             @include breakpoint(small) {
-              font-size: 1em;
+              font-size: 0.7em;
             }
             @include breakpoint(medium) {
-              font-size: 1em;
+              font-size: 0.8em;
             }
             @include breakpoint(large) {
-              font-size: 1em;
+              font-size: 0.9em;
             }
             @include breakpoint(xlarge) {
               font-size: 1.1em;
@@ -382,7 +441,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
           }
         }
 
-        @include breakpoint(small){
+        /*@include breakpoint(small){
           height: 540px;
         }
         @include breakpoint(medium){
@@ -396,19 +455,17 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
         }
         @include breakpoint(xxlarge){
           height: 870px;
-        }
+        }*/
       }
-    }
+
     .griglia {
-      @include grid-row();
-      width: 100%;
-      max-width: 2008px;
+
       @include breakpoint(xxlarge only){
       margin: 1% auto;
     }
-      margin: 0 auto;
+      margin: 0 auto 50px auto;
 
-      padding: 30px 5% 50px;
+      padding: 0 7%;
       .box-about{
         float: left !important;
         margin-top: 20px !important;
@@ -482,36 +539,40 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
         }
       }
     }
+    }
   }
   // terza FASCIA GIURIA
     .section.giuria{
       .fp-tableCell{
         vertical-align: inherit;
+        background-color: #f7f7f7;
+
         .sfondo-giuria{
           background-image: url('../images/bck-giuria.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: top;
+          vertical-align: middle;
 
-          .content{
+          @include breakpoint(large down) {
+            height: 400px !important;
+            background-image: url('../images/bck-giuria-landscape.jpg');
+          }
+
+          @include breakpoint(xlarge up){
+            height: 700px !important;
+          }
+
+
+          .content {
             width: 100%;
-            max-width: 670px;
-            margin: 0 auto;
-            @include breakpoint(small) {
-              padding: 35% 0 3%;
+            max-width: 70%;
+            margin: auto;
+            padding-top: 7%;
+            @include breakpoint(xlarge up){
+              padding-top: 15%;
             }
-            @include breakpoint(medium) {
-              padding: 25% 8% 3%;
-            }
-            @include breakpoint(large) {
-              padding: 17% 0 3%;
-            }
-            @include breakpoint(xlarge) {
-              padding: 13% 0 3%;
-            }
-            @include breakpoint(xxlarge) {
-              padding: 12% 0 3%;
-            }
+
             h1{
               color: #ffffff;
               text-transform: uppercase;
@@ -583,34 +644,19 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
               }
             }
           }
-          @include breakpoint(small){
-            height: 400px !important;
-          }
-          @include breakpoint(medium){
-            height: 500px !important;
-          }
-          @include breakpoint(large){
-            height: 550px !important;
-          }
-          @include breakpoint(xlarge){
-            height: 655px !important;
-          }
-              }
+
+        }
               .giudici{
-                background-color: #d0d0d0;
-                @include grid-row();
+                background-color: #f7f7f7;
                 width: 100%;
-                max-width: 1450px;
-                padding: 5% 5% 7%;
+                padding: 3% 10%;
+
+
                   .box-giuria{
                     position: relative;
                     overflow: hidden;
-                    /*transform: translateX(-20px);
-                    -webkit-transform:translateX(-20px);
-                    -moz-transform:translateX(-20px);
-                    -o-transform:translateX(-20px);
-                    -ms-transform:translateX(-20px);
-                    transition: all 0.3s ease-in-out;*/
+                    box-sizing: border-box;
+
                   @include breakpoint(small){
                     @include grid-column(12);
                   }
@@ -620,103 +666,62 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                   @include breakpoint(large){
                     @include grid-column(4);
                   }
-                    padding: 0 2%;
-                    margin: 0 0 5% 0;
+
 
                   //Zoom
-                  figure{
-
+                  figure {
                       img {
                         width: 100%;
-                        /*transition: all 1s ease-out;*/
                       }
-                      /*&::after {
-                        content: "";
-                        display: block;
-                        position: relative;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        z-index: 2;
-                        background-color: rgb(0, 0, 0);
-                        transform: scaleX(1);
-                        transform-origin: right center 0px;
-                        transition-duration: 1s;
-                        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-                        transition-property: transform, -webkit-transform;
-                        transition-delay: 0.4s;
-                      }*/
-
-
-
-
                   }
-                  figure:hover img {
-                    -webkit-transform: scale(1.1);
-                     transform: scale(1.1);
-                   }
 
-                    h3{
-                      text-align: left;
-                      font-size:1.7em;
-                      padding:0;
-                      margin-top:30px;
-                      text-transform:uppercase;
-                      @include breakpoint(small only){text-align: center;}
-                    }
-                    p{
-                      text-align: left;
-                      line-height: 0px;
+
+
+                    .desc-giudice {
+                      position: relative;
+                      width: 100%;
+                      text-align: left !important;
                       font-size: 0.9em !important;
-                      @include breakpoint(small only){text-align: center;}
-                      span{font-weight: bold; }
+                      padding: 7px 0 3px 3px;
+                      h4 { margin: 0; padding: 0; }
+                      .role { float: left; clear: left; }
+                      box-sizing: border-box;
                     }
-                    /*&.is-showing{
-                      opacity: 1;
-                      transform: translateX(0px);
-                      -webkit-transform:translateX(0px);
-                      -moz-transform:translateX(0px);
-                      -o-transform:translateX(0px);
-                      -ms-transform:translateX(0px);
-                    }*/
+
                   }
 
-                  button{
-                    border: 1px solid #000000;
-                    color: #000000;
-                  }
+
                 }
+              }
+              button{
+                margin: 0 0 30px 0;
+                border: 1px solid #000000;
+                color: #000000;
               }
             }
 
   //Terza fascia WINNER
   .section.winner{
     .fp-tableCell{
+
       @include breakpoint(medium){
-        padding: 5% 2% 0;
+        padding: 3% 3% 0;
         vertical-align: middle;
       }
       @include breakpoint(large){
-        padding: 20% 0 0;
+        padding: 12% 5% 0;
         vertical-align: inherit;
       }
       @include breakpoint(xlarge){
-        padding: 15% 0 0;
+        padding: 7% 8% 0;
         vertical-align: inherit;
       }
 
       .content{
-          @include grid-row();
-            @include breakpoint(large){
-              max-width: 55rem;
-            }
-            @include breakpoint(xlarge){
-              max-width: 65rem;
-            }
-            @include breakpoint(xxlarge){
-              max-width: 75rem;
-            }
+        float: left;
+        width: 100%;
+        background-color: #f7f7f7;
+        padding: 3% 5%;
           .box-winner{
             @include grid-column(12);
             position: relative;
@@ -724,56 +729,21 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
               position: relative;
               width: 95%;
 
-              opacity: 0;
-              transform: translateX(80px);
-              -webkit-transform:translateX(80px);
-              -moz-transform:translateX(80px);
-              -o-transform:translateX(80px);
-              -ms-transform:translateX(80px);
-              transition: all 0.4s ease-in-out;
 
-              &.is-showing{
-                opacity: 1 !important;
-                transform: translateX(0px);
-                -webkit-transform:translateX(0px);
-                -moz-transform:translateX(0px);
-                -o-transform:translateX(0px);
-                -ms-transform:translateX(0px);
-
-              }
             }
             img.foto{
               position: absolute;
               width: 100%;
               left: 0;
+              height: 83%;
               @include breakpoint(small){
                 top: 5px;
               }
               @include breakpoint(large){
                 top: 15px;
               }
-              opacity: 0;
+              //opacity: 0;
               transition: all 0.4s ease-in-out;
-
-
-              &.is-showing{
-                opacity: 1 !important;
-                -webkit-animation: cssAnimation 2.3258s 1 ease;
-                -moz-animation: cssAnimation 2.3258s 1 ease;
-                -o-animation: cssAnimation 2.3258s 1 ease;
-              }
-              @-webkit-keyframes cssAnimation {
-              from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-              to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
-              }
-              @-moz-keyframes cssAnimation {
-              from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-              to { -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
-              }
-              @-o-keyframes cssAnimation {
-              from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-              to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
-              }
 
             }
 
@@ -793,7 +763,7 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
 
                   margin: 0;
                   text-align: left;
-                  opacity: 0;
+                  /*opacity: 0;
                   transform: translateY(-90px);
                   -webkit-transform:translateY(-90px);
                   -moz-transform:translateY(-90px);
@@ -808,30 +778,30 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                     -moz-transform:translateY(0px);
                     -o-transform:translateY(0px);
                     -ms-transform:translateY(0px);
-                  }
+                  }*/
                 }
                 p{
-                  opacity: 0;
+                  /*opacity: 0;
                   transform: translateY(-90px);
                   -webkit-transform:translateY(-90px);
                   -moz-transform:translateY(-90px);
                   -o-transform:translateY(-90px);
                   -ms-transform:translateY(-90px);
-                  transition: all 0.8s ease-in-out;
+                  transition: all 0.8s ease-in-out;*/
                   @include breakpoint(small){
                     font-size: .9em;
                   }
                   @include breakpoint(xlarge){
                     font-size: 1em;
                   }
-                  &.is-showing{
+                  /*&.is-showing{
                     opacity: 1;
                     transform: translateY(0px);
                     -webkit-transform:translateY(0px);
                     -moz-transform:translateY(0px);
                     -o-transform:translateY(0px);
                     -ms-transform:translateY(0px);
-                  }
+                  }*/
 
                 }
             }
@@ -845,36 +815,28 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
   .section.lista-winners{
     .fp-tableCell{
       vertical-align: inherit;
-      padding: 10% 5%;
       .winners{
-        @include grid-row();
+
         width: 100%;
-        max-width: 2008px;
-        margin: 0 auto;
+        padding: 3% 7%;
+
           .box-winners{
-            opacity: 0;
-            transform: translateX(-20px);
-            -webkit-transform:translateX(-20px);
-            -moz-transform:translateX(-20px);
-            -o-transform:translateX(-20px);
-            -ms-transform:translateX(-20px);
-            transition: all 0.3s ease-in-out;
-            @include breakpoint(small){
+            box-sizing: border-box;
+
+            /*@include breakpoint(small){
               @include grid-column(12);
             }
             @include breakpoint(medium){
               @include grid-column(6);
             }
-            @include breakpoint(large){
+            @include breakpoint(large up){
               @include grid-column(4);
-            }
-            margin-bottom: 50px;
+            }*/
+            margin-bottom: 17px;
             float: left !important;
             text-align: left;
-            padding: 0 2%;
-            position: relative;
             figure{
-              overflow: hidden; background-color: #000000;
+              overflow: hidden; background-color: transparent;
               img{
                 max-width: 100%;
                 -moz-transition: all 0.3s;
@@ -887,23 +849,34 @@ button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: #fff; tex
                transform: scale(1.1);
              }
 
-            h3{color:#cd1726; text-transform: uppercase; font-size: 1.7em; margin-bottom: 0; margin-top: 20px; }
-            p{line-height: 18px; color: #ffffff;font-size: 0.9em; span{font-weight: bold; font-size: 0.9em;}}
-
-            &.is-showing{
-              opacity: 1;
-              transform: translateX(0px);
-              -webkit-transform:translateX(0px);
-              -moz-transform:translateX(0px);
-              -o-transform:translateX(0px);
-              -ms-transform:translateX(0px);
-            }
+            h6,h5,h4,h3{color:#cd1726; font-weight: bold; margin-bottom: 0; margin-top: 7px;
+            text-overflow: ellipsis; line-height: 24px; box-sizing: border-box; }
+            p{line-height: 18px; color: #ffffff;font-size: 0.9em; box-sizing: border-box;
+              span{font-weight: bold; font-size: 0.9em;}}
 
 
           }
       }
     }
   }
+
+  // sponsor
+  .section.sponsors {
+    .fp-tableCell{
+      background-color: #f7f7f7;
+      vertical-align: inherit;
+      .content{
+        width: 100%;
+        padding: 2% 5% 0 10%;
+      }
+
+      /*.sponsors {
+        width: 100%;
+        background-color: #f7f7f7;
+        padding: 5% 10% 0 10%;
+      }*/
+  }
+}
 
 }// Chiusura Full-Page
 
@@ -1070,3 +1043,17 @@ a.prova.is-active:after{
     display: none;
   }
 }
+
+.carousel {
+  slider { margin-bottom: 0; }
+}
+
+#interna {
+  padding: 3% 6%;
+  width: 100%;
+  float: left;
+  margin-top: 240px;
+  background-color: #fff;
+}
+
+.entry-content, .page { width: 100%; }

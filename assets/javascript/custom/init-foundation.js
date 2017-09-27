@@ -1,8 +1,7 @@
-/*$(window).load(function() {
-	$(".loader").fadeOut("fast");
-})*/
+
 
 jQuery(document).foundation();
+
 
 $('[data-toggle-menu]').on("click", function(){
   $("#overlay-nav-menu").toggleClass("is-open");
@@ -15,6 +14,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
 $(window).scroll(function(){
 //Controlli da console, a che altezza si trova lo scroll
   var WH = $(window.top).height(); // Altezza finestra
@@ -22,7 +22,9 @@ $(window).scroll(function(){
   var POS = WH + ST;
 
   //Fascia ABOUT 2°
-    var PREMIO = $('.about').offset().top - 1;
+
+    var PREMIO = $('.about').offset().top - 40  ;
+    //console.log("ST: "+ST+" PREMIO: "+PREMIO);
     if(ST > PREMIO ){
       $('.content p').eq(0).addClass('is-showing'); //Testo
       $('.content h1').eq(0).addClass('is-showing'); // Titolo
@@ -30,7 +32,7 @@ $(window).scroll(function(){
       $('.center .prova').addClass('is-active'); //Bottone
     }
 
-    var BOX_VIDEO = $('.box-about').offset().top + 30;
+    var BOX_VIDEO = $('.box-about').offset().top + 50;
      if( POS > BOX_VIDEO )  {
        $('.box-about').each(function(i){
          setTimeout(function(){
@@ -80,8 +82,10 @@ $(window).scroll(function(){
     //Nascondi mouse
     if( ST > 40 )  {
       $('.mouse').addClass('is-hide');
+      $('#sponsor').addClass('is-hide');
     }else{
       $('.mouse').removeClass('is-hide');
+      $('#sponsor').removeClass('is-hide');
     }
 
     //Nascondi Logo dopo seconda slide
@@ -96,13 +100,26 @@ $(window).scroll(function(){
 
   });  // Fine SCroll function
 
+
+
 //Full Page jquery effetto slide section
 $(document).ready(function() {
   $('#claim').foundation('toggle');
   $('#fullpage').fullpage({
     anchors: ['hp','il-premio', 'la-giuria', 'winner', 'winners'],
-    sectionsColor: ['#fff','#fff', '#fff', '#282828', '#282828'],
+    sectionsColor: ['#f7f7f7','#f7f7f7', '#f7f7f7', '#282828', '#282828'],
     hybrid:true,
     fitToSection: false
   });
-})
+});
+
+/*$(".img-box img ").hover( function() {
+  $(this).addClass("zoom");
+  $(this).removeClass("curtain-img");
+  $(this).removeClass("normal-view");
+});
+
+$(".img-box img ").mouseout( function() {
+  $(this).removeClass("zoom");
+  $(this).addClass("normal-view");
+});*/

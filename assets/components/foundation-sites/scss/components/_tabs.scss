@@ -93,9 +93,11 @@ $tab-content-padding: 1rem !default;
   > a {
     display: block;
     padding: $padding;
-    font-size: $font-size;
+    font-size: 17px;
+    font-weight: bold;
     line-height: 1;
-    color: $color;
+    color: #000;
+
 
     &:hover {
       background: $background-hover;
@@ -105,7 +107,7 @@ $tab-content-padding: 1rem !default;
     &:focus,
     &[aria-selected='true'] {
       background: $background-active;
-      color: $color-active;
+      text-decoration: underline;
     }
   }
 }

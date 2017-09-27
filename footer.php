@@ -10,43 +10,30 @@
 
 ?>
 
-		</section>
+	
 		<div id="footer-container">
 			<footer id="footer">
 				<div class="footer-colonna">
-				 <h3>menu</h3>
+
 				 	<ul>
-				 		<li>prova 1</li>
-						<li>prova 2</li>
-						<li>prova 3</li>
-						<li>prova 4</li>
-						<li>prova 5</li>
-						<li>prova 6</li>
-						<li>prova 7</li>
-						<li>prova 8</li>
+				 		<li><a href="chi-siamo">CHI SIAMO</a></li>
+				 		<li><a href="contatti">CONTATTI</a></li>
+				 		<li><a href="http://www.relationalstrategiesgrandprix.com/it/newsletter" target="_blank">NEWSLETTER</a></li>
+
 				 	</ul>
 				</div>
 				<div class="footer-colonna">
-					<h3>libro fotografico (archivio)</h3>
 					<ul>
-						<li>prova 1</li>
-						<li>prova 2</li>
-						<li>prova 3</li>
-						<li>prova 4</li>
+						<li><a href="#">EDIZIONE 2016</a></li>
+						<li><a href="#">EDIZIONE 2015</a></li>
+						<li><a href="#">EDIZIONE 2014</a></li>
 					</ul>
 				</div>
+
 				<div class="footer-colonna">
-					<h3>grandprix (archivio)</h3>
-					<ul>
-						<li>prova 1</li>
-						<li>prova 2</li>
-						<li>prova 3</li>
-						<li>prova 4</li>
-					</ul>
-				</div>
-				<div class="footer-colonna">
-					<h3>eventi tvn</h3>
-					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-gp.png">
+					<h3>EVENTI TVN</h3>
+					<img class="inverted" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-gp.png">
+					<br/><br/>
 					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-bi.png">
 				</div>
 			</footer>

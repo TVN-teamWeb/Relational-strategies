@@ -1,4 +1,8 @@
-
+<div id="logo" class="logo">
+  <a href="/restyle">
+  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png">
+  </a>
+</div>
 <ul>
 
 <?php

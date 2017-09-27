@@ -31,7 +31,7 @@
 <!-- TOP -->
 	<!-- MENU LEFT -->
 	<div id="menu">
-		<span style="font-size:45px;cursor:pointer" onclick="openNav()">&#9776;</span><span class="menu">MENU</span>
+		<span onclick="openNav()">&#9776;</span><span class="menu">MENU</span>
 	</div>
 
 	<!-- MENU CENTER -->
@@ -41,13 +41,20 @@
 
 	<!-- MENU RIGHT -->
 	<div id="lingue">
-		lingue
+		<a class="active" href="/it">IT</a>
+		<span class="pipe"></span>
+		<a href="/en">EN</a>
 	</div>
 
 	<!-- BOTTOM -->
 <div id="mouse" class="mouse hide-for-small-only">
 	<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/mouse.png">
 </div>
+
+<div id="sponsor">
+	<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/sponsor.png" />
+</div>
+
 
 <!-- LOGIN -->
 <div id="login" class="hide-for-small-only">
@@ -60,8 +67,8 @@
 <div id="social" class="hide-for-small-only">
 	<div class="vertical-text">
 		<span class="login">social</span>
-			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://www.facebook.com/RelationalStrategiesGrandPrix/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 	</div>
 	<!-- img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/social.png">
 	<div class="icons">
