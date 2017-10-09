@@ -1,8 +1,12 @@
-<?php get_header(); ?>
+<?php get_header();
+
+?>
 
 <script type="javascript">
   window.scrollTo(0,0);
 </script>
+
+<?php get_template_part( 'template-parts/video' ); ?>
 
 <div id="fullpage">
   <!-- Sezione autoscroll ON -->
@@ -21,69 +25,62 @@
       <div class="content">
         <h1 class="text"> 
           <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">Il Premio dedicato</div>
+            <div class="curtain-txt txt-bold">IL PREMIO DEDICATO ALLE TECNICHE PIÙ INNOVATIVE</div>
           </div>
           <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">alle tecniche più innovative</div>
+            <div class="curtain-txt txt-bold">ED EFFICACI DEL RELATIONAL MARKETING:</div>
           </div>
           <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">ed efficaci del</div>
-          </div>
-          <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">relational marketing</div>
+            <div class="curtain-txt txt-bold">DIGITAL, DM, PR, DIGITAL, EVENTS, BRANDED CONTENT E PROMO.</div>
           </div>
         </h1>
 
-  <p>il Premio dedicato alle tecniche più innovative ed efficaci del relational marketing: 
-  <b>digital, DM, PR, digital, events, branded content e promo.</b>
-  Un Evento sempre in movimento, capace di rinnovarsi di volta in volta per seguire
-  l’evoluzione del mercato ed essere sempre attuale</p>
+        <p>Un Evento sempre in movimento, capace di rinnovarsi di volta in volta per seguire
+          l’evoluzione del mercato ed essere sempre attuale...</p>
   <!-- button type="button" name="button" class="alert">edizione 2016</button -->
         <div class="center">
           <a class="prova" href="il-premio">Scopri di più</a>
         </div>
       </div>
 
-
-
     </div>
 
-    <div class="griglia row expanded ">
-      <div class="box-about">
-        <div class="square">
-          <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/white.jpg">
-          <figure>
-            <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/giuria01.jpg">
-          </figure>
-          <p class="title">La giuria</p>
+    <?php $CDN = "http://media.televisionet.tv/video/grandprix/relationalstrategies/"; ?>
+    <div class="griglia expanded row ">
+      <?php $video = "RELATIONAL-SERATA-VINCITORI-TOTALONE-2016.mp4"; ?>
+      <div class="box-about" onclick="popupVideo('Interviste ai vincitori 2016','<?php echo $CDN.$video ?>')">
+        <div class="img-box">
+          <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-01.jpg" />
+        </div>
+        <div class="appear-box">
+          <p class="title appear-txt">Interviste ai vincitori 2016</p>
         </div>
       </div>
-      <div class="box-about">
-        <div class="square">
-          <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/white.jpg">
-          <figure>
-            <div class="curtain"></div>
-            <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/giuria01.jpg">
-          </figure>
-          <p class="title">La giuria</p>
+      <?php $video = "RELATIONAL-SERATA-PARTNER-2016.mp4"; ?>
+      <div class="box-about" onclick="popupVideo('La parola ai partner 2016','<?php echo $CDN.$video ?>')">
+        <div class="img-box">
+          <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-02.jpg" />
+        </div>
+        <div class="appear-box">
+          <p class="title appear-txt">La parola ai partner 2016</p>
         </div>
       </div>
-      <div class="box-about">
-        <div class="square">
-          <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/white.jpg">
-          <figure>
-            <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/giuria01.jpg">
-          </figure>
-          <p class="title">Il Galà</p>
+      <?php $video = "RELATIONAL-GIURIA-TOTALE-2016.mp4"; ?>
+      <div class="box-about" onclick="popupVideo('La giuria 2016','<?php echo $CDN.$video ?>')">
+        <div class="img-box">
+          <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-03.jpg" />
+        </div>
+        <div class="appear-box">
+          <p class="title appear-txt">Giuria 2016</p>
         </div>
       </div>
-      <div class="box-about">
-        <div class="square">
-          <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/white.jpg">
-          <figure>
-            <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/giuria01.jpg">
-          </figure>
-          <p class="title">Tutti i lavori 2017</p>
+      <?php $video = "tutti i lavori__audio_1 (1).mp4"; ?>
+      <div class="box-about" onclick="popupVideo('Tutti i lavori 2016','<?php echo $CDN.$video ?>')">
+        <div class="img-box">
+          <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-04.jpg" />
+        </div>
+        <div class="appear-box">
+          <p class="title appear-txt">Tutti i lavori 2016</p>
         </div>
       </div>
     </div>
@@ -93,9 +90,13 @@
   <div class="section giuria fp-normal-scroll">
     <div class="sfondo-giuria">
       <div class="content">
-        <h1> la giuria</h1>
-        <p>Un riconoscimento particolare va ai membri del comitato di selezione
-per lo scrupolo e l’attenzione posti nell’individuare i vincitori di categoria</p>
+        <?php if ($LANG == 'en') { ?>
+        <h1>the jury</h1>
+        <p>The Award brings together the protagonists of corporate marketing<br/>and academic world/partners</p>
+        <?php } else  { ?>
+        <h1>la giuria</h1>
+        <p>Il Premio riunisce in Giuria i protagonisti del marketing d’azienda<br/> e i rappresentanti delle associazioni/partner</p>
+        <?php } ?>
       </div>
     </div>
 
@@ -104,122 +105,197 @@ per lo scrupolo e l’attenzione posti nell’individuare i vincitori di categor
       <?php get_template_part( 'template-parts/giuria' ); ?>
 
     </div>
-    <button type="button" name="button">Tutti i giurati</button>
+    <a class="button" name="button" href="<?php echo get_page_link(3751); ?>" >
+      Tutti i giurati
+    </a>
   </div>
 
 
   <div class="section winner">
     <div class="content">
-      <h1>WINNER</h1>
-      <div class="box-winner">
+      <h1>GRANDPRIX 2016</h1>
+      <?php $CDN = "http://wpc.6f93.edgecastcdn.net/806F93/media.televisionet.tv/video/grandprix/relationalstrategies/";
+      $video = $CDN."22_11_16-BURGER_KING.mp4"?>
+      <div class="box-winner img-box"  onclick="popupVideo('King of Umarells','<?php echo $video ?>')">
         <img class="white" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/bckwinner.jpg">
-        <!--img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/winner.jpg"-->
-        <img class="foto" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/WINNER.jpg">
-        <div class="info">
-          <h3>KING OF UMARELLS</h3>
-          <p>Client: <b>Burgher King</b> | Agency: <b>The Big Now</b> | 1st Prize: <b>On/Off integrated communication</b></p>
+        <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/Winner2016.jpg">
+        <div class="info appear-box">
+          <h3 class="appear-txt">KING OF UMARELLS</h3>
+          <p class="appear-txt"><b>Burger King</b> | <b>The Big Now</b> | 1st Prize: <b>On/Off integrated communication</b></p>
         </div>
       </div>
     </div>
   </div>
 
 <div class="section lista-winners fp-normal-scroll fp-auto-height">
-  <div class="winners row expanded">
-
-    <?php $args = array(
-          'post_type' => 'winners',
-          'posts_per_page' => 20
-        );
-
-        $winners = new WP_Query( $args );
-
-        $i=0;
-
-        if ( $winners->have_posts() ) :
-          while ( $winners->have_posts() ) : $winners->the_post();
-
-          $titolo = get_field('titolo');
-          $cliente = get_field('azienda');
-          $agenzia = get_field('agenzia');
-          $cdp = get_field('cdp');
-          $premio = get_field('premio');
-          $img = get_field('thumb_video');
-
-          if( ($img['url'] != "") && (trim($titolo) != "Vincitore") ) :
-
-          ?>
-
-    <div class="box-winners small-12 medium-6 large-4 column">
-      <figure class="img-box">
-        <img class="winner curtain-img" src="<?php echo $img['url']; ?>">
-      </figure>
-      <div class="appear-box">
-      <h5 class="appear-txt"><?php echo $titolo; ?></h5><br/>
-
-      <?php   if( (trim($cliente) != "") ) : ?>
-        <p class="appear-txt"><b>Client</b>: <?php echo $cliente; ?></p><br/>
-      <?php endif; ?>
-      <?php   if( (trim($agenzia) != "") ) : ?>
-        <p class="appear-txt"><b>Agency</b>: <?php echo $agenzia; ?></p><br/>
-      <?php endif; ?>
-      <?php   if( (trim($cdp) != "") ) : ?>
-        <p class="appear-txt"><b>CdP</b>: <?php echo $cdp; ?></p><br/>
-      <?php endif; ?>
-
-      <p class="appear-txt"><b>1st Prize</b>: <?php echo $premio; ?></p><br/>
-
-      </div>
-
-    </div>
-
-    <?php
-      endif;
-      endwhile;
-      endif;
-      wp_reset_postdata();
-
-      ?>
-
-
-  </div>
+  <?php get_template_part( 'template-parts/winners' ); ?>
 </div>
 
 <div class="section sponsors fp-normal-scroll fp-auto-height">
   <!-- Slider loghi -->
   <div class="content">
-    <div class="responsive slider">
+    <div class="row">
+      <div class="small-12 medium-6">
+        <div class="text-left"><b>Powered by</b></div>
+        <div class="responsive slider">
+
+              <?php $args = array(
+                    'post_type' => 'sponsor',
+                    'posts_per_page' => 7,
+                    'cat' => 13
+                  );
+
+                  $sponsor = new WP_Query( $args );
+
+                  $i=0;
+
+                  if ( $sponsor->have_posts() ) :
+                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
+
+                    $link = get_field('link');
+                    $img = get_field('immagine');
+
+                    ?>
+
+                    <div>
+                      <a href="<?php echo $link; ?>" target="_blank">
+                        <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
+                      </a>
+                    </div>
+
+                    <?php
+
+                      endwhile;
+                      endif;
+                      wp_reset_postdata();
+
+                      ?>
+
+        </div>
+
+      </div>
+      <div class="small-12 medium-6">
+        <div class="text-left"><b>Sponsor</b></div>
+        <div class="responsive slider">
+
+              <?php $args = array(
+                    'post_type' => 'sponsor',
+                    'posts_per_page' => 7,
+                    'cat' => 12
+                  );
+
+                  $sponsor = new WP_Query( $args );
+
+                  $i=0;
+
+                  if ( $sponsor->have_posts() ) :
+                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
+
+                    $link = get_field('link');
+                    $img = get_field('immagine');
+
+              ?>
+
+              <div>
+                <a href="<?php echo $link; ?>" target="_blank">
+                  <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
+                </a>
+              </div>
+
+              <?php
+
+                endwhile;
+                endif;
+                wp_reset_postdata();
+
+              ?>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="small-12 medium-6">
+        <div class="text-left"><b>In partnership with</b></div>
+        <div class="responsive slider">
+
+              <?php $args = array(
+                    'post_type' => 'sponsor',
+                    'posts_per_page' => 12,
+                    'cat' => 11
+                  );
+
+                  $sponsor = new WP_Query( $args );
+
+                  $i=0;
+
+                  if ( $sponsor->have_posts() ) :
+                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
+
+                    $link = get_field('link');
+                    $img = get_field('immagine');
+
+                    ?>
+
+                    <div>
+                      <a href="<?php echo $link; ?>" target="_blank">
+                        <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
+                      </a>
+                    </div>
+
+                    <?php
+
+                      endwhile;
+                      endif;
+                      wp_reset_postdata();
+
+                      ?>
+
+        </div>
+      </div>
+      <div class="small-12 medium-6">
+        <div class="text-left"><b>Partner tecnici</b></div>
+        <div class="responsive slider">
+
+              <?php $args = array(
+                    'post_type' => 'sponsor',
+                    'posts_per_page' => 12,
+                    'cat' => 10
+                  );
+
+                  $sponsor = new WP_Query( $args );
+
+                  $i=0;
+
+                  if ( $sponsor->have_posts() ) :
+                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
+
+                    $link = get_field('link');
+                    $img = get_field('immagine');
+
+                    ?>
+
+                    <div>
+                      <a href="<?php echo $link; ?>" target="_blank">
+                        <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
+                      </a>
+                    </div>
+
+                    <?php
+
+                      endwhile;
+                      endif;
+                      wp_reset_postdata();
+
+                      ?>
+
+        </div>
+      </div>
 
 
-          <?php $args = array(
-                'post_type' => 'sponsor',
-                'posts_per_page' => 20
-              );
 
-              $sponsor = new WP_Query( $args );
 
-              $i=0;
 
-              if ( $sponsor->have_posts() ) :
-                while ( $sponsor->have_posts() ) : $sponsor->the_post();
-
-                $link = get_field('link');
-                $img = get_field('immagine');
-
-                ?>
-
-                <div>
-                  <a href="<?php echo $link; ?>" target="_blank">
-                    <img src="<?php echo $img['url']; ?>" />
-                  </a>
-                </div>
-
-                <?php
-
-                  endwhile;
-                  endif;
-                  wp_reset_postdata();
-
-                  ?>
 
     </div>
   </div>

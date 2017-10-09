@@ -13,14 +13,28 @@
     h3{font-size: 1em; text-decoration: none;}
       @include grid-row();
         .footer-colonna {
-           @include grid-column(3);
-           padding: rem-calc(30) 0;
+          padding: rem-calc(30) 0;
+          @include breakpoint(small) {
+            @include grid-column(12);
+          }
 
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          a { color: #fff; }
+
+          @include breakpoint(large) {
+            @include grid-column(4);
+          }
+
+        .footer-menu {
+          text-align: left;
+          padding-left: 20%;
+          h3 { text-align: left; }
+          ul {
+            text-align: left;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            a { color: #fff;  }
+          }
+          img { margin-bottom: 17px; }
         }
       }
     }
@@ -29,11 +43,13 @@
 
 }
 
-#banda-loghi{
+#banda-loghi-tvn{
   background-color: #ffffff;
   margin: 5% auto;
   text-align: center;
-  @include grid-row();
+  @include breakpoint(medium down) {
+    max-width: 90%;
+  }
 }
 
 .inverted {

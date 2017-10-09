@@ -4,7 +4,8 @@
 $args = array(
     'post_type' => 'giuria',
     'cat' => 4,
-    'posts_per_page' => 6
+    'posts_per_page' => 3,
+    'orderby' => 'rand'
   );
   $giurati = new WP_Query( $args );
   if ( $giurati->have_posts() ) {

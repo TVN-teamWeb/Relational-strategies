@@ -14,7 +14,11 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<?php wp_head(); ?>
+		<?php
+			wp_head();
+			global $LANG;
+			$LANG = qtranxf_getLanguage();
+		?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
@@ -41,9 +45,9 @@
 
 	<!-- MENU RIGHT -->
 	<div id="lingue">
-		<a class="active" href="/it">IT</a>
+		<a href="?lang=it" <?php if ($LANG == 'it') { echo "class='active'"; } ?> >IT</a>
 		<span class="pipe"></span>
-		<a href="/en">EN</a>
+		<a href="?lang=en" <?php if ($LANG == 'en') { echo "class='active'"; } ?> >EN</a>
 	</div>
 
 	<!-- BOTTOM -->
@@ -79,9 +83,17 @@
 
 <nav id="myNav" class="overlay">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div id="logomenu">
+	  <a href="/restyle">
+	  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png">
+	  </a>
+	</div>
   <div class="overlay-content">
 		<?php get_template_part( 'template-parts/menu' ); ?>
   </div>
+	<div id="sponsormenu">
+	  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/sponsor.png" />
+	</div>
 </nav>
 
 		<?php do_action( 'foundationpress_after_header' );

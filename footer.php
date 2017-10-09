@@ -10,35 +10,44 @@
 
 ?>
 
-	
+
 		<div id="footer-container">
 			<footer id="footer">
-				<div class="footer-colonna">
 
-				 	<ul>
-				 		<li><a href="chi-siamo">CHI SIAMO</a></li>
-				 		<li><a href="contatti">CONTATTI</a></li>
-				 		<li><a href="http://www.relationalstrategiesgrandprix.com/it/newsletter" target="_blank">NEWSLETTER</a></li>
-
-				 	</ul>
-				</div>
 				<div class="footer-colonna">
-					<ul>
-						<li><a href="#">EDIZIONE 2016</a></li>
-						<li><a href="#">EDIZIONE 2015</a></li>
-						<li><a href="#">EDIZIONE 2014</a></li>
-					</ul>
+					<div class="footer-menu  float-center">
+						<h3>TVN MEDIA GROUP</h3>
+					 	<ul>
+					 		<li><a href="chi-siamo">CHI SIAMO</a></li>
+					 		<li><a href="contatti">CONTATTI</a></li>
+					 		<li><a href="http://www.relationalstrategiesgrandprix.com/it/newsletter" target="_blank">NEWSLETTER</a></li>
+
+					 	</ul>
+					</div>
 				</div>
 
 				<div class="footer-colonna">
-					<h3>EVENTI TVN</h3>
-					<img class="inverted" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-gp.png">
-					<br/><br/>
-					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-bi.png">
+					<div class="footer-menu  float-center">
+						<h3>EDIZIONI PRECEDENTI</h3>
+						<ul>
+							<li><a href="#">EDIZIONE 2015</a></li>
+							<li><a href="#">EDIZIONE 2014</a></li>
+						</ul>
+					</div>
 				</div>
+
+				<div class="footer-colonna">
+					<div class="footer-menu float-center">
+						<h3>ALTRI EVENTI TVN</h3>
+						<img class="inverted" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-gp.png">
+						&#160;&#160;&#160;
+						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo-bi.png">
+					</div>
+				</div>
+
 			</footer>
 		</div>
-		<div id="banda-loghi">
+		<div id="banda-loghi-tvn">
 			<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/banda-loghi.png">
 		</div>
 

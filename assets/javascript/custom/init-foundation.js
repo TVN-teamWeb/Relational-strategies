@@ -1,5 +1,4 @@
 
-
 jQuery(document).foundation();
 
 
@@ -8,11 +7,11 @@ $('[data-toggle-menu]').on("click", function(){
 });
 
 function openNav() {
-    document.getElementById("myNav").style.width = "100%";
+  $("#myNav").addClass("opened");
 }
 
 function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+  $("#myNav").removeClass("opened");
 }
 
 $(window).scroll(function(){
@@ -32,13 +31,10 @@ $(window).scroll(function(){
       $('.center .prova').addClass('is-active'); //Bottone
     }
 
-    var BOX_VIDEO = $('.box-about').offset().top + 50;
+    var BOX_VIDEO = $('.box-about').eq(0).offset().top + 120;
      if( POS > BOX_VIDEO )  {
-       $('.box-about').each(function(i){
-         setTimeout(function(){
-           $('.box-about').eq(i).addClass('is-showing'); // Box video
-         },150 * (i+1));
-       });
+
+       $('.box-about').addClass('is-showing');
      }
 
      // GIURIA
@@ -61,9 +57,8 @@ $(window).scroll(function(){
      //WINNER
     var WINNER = $('.winner').offset().top + parseInt($('.box-winner').css("height"));
     if( POS > WINNER )  {
-      console.log("vincitori");
-      $('.white').addClass('is-showing'); // immagine vincitore
-      $('.foto').addClass('is-showing');
+
+      $('.foto').parent().addClass('is-showing');
       $('.info h3').addClass('is-showing');
       $('.info p').addClass('is-showing');
     }
@@ -109,7 +104,10 @@ $(document).ready(function() {
     anchors: ['hp','il-premio', 'la-giuria', 'winner', 'winners'],
     sectionsColor: ['#f7f7f7','#f7f7f7', '#f7f7f7', '#282828', '#282828'],
     hybrid:true,
-    fitToSection: false
+    fitToSection: false,
+    bigSectionsDestination:'top',
+    responsiveWidth: 640,
+    responsiveHeight: 500
   });
 });
 
@@ -123,3 +121,16 @@ $(".img-box img ").mouseout( function() {
   $(this).removeClass("zoom");
   $(this).addClass("normal-view");
 });*/
+
+function popupVideo(title,src) {
+
+    $("#videoModalTitle").html(title);
+    $("#videoModalFrame").attr("src", src);
+
+    //var elem = new Foundation.Reveal("");
+    $("#videoModal").foundation("open");
+}
+
+function stopVideo() {
+  $("#videoModalFrame").eq(0).trigger('pause');
+}

@@ -24,7 +24,8 @@ var COMPATIBILITY = [
   'last 2 versions',
   'ie >= 9',
   'Android >= 2.3',
-  'ios >= 7'
+  'ios >= 7',
+  'safari >= 8'
 ];
 
 // File paths to various assets are defined here.

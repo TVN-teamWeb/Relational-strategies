@@ -184,3 +184,6 @@ function custom_post() {
 
 // Inizializzazione della funzione
 add_action( 'init', 'custom_post');
+
+add_image_size( 'winners-thumb', 450, 300, true );
+add_image_size( 'sponsor-thumb', 200, 200, false );

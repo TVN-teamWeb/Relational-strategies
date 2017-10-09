@@ -14,7 +14,11 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<?php wp_head(); ?>
+		<?php
+			wp_head();
+			global $LANG;
+			$LANG = qtranxf_getLanguage();
+		?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
@@ -28,28 +32,19 @@
 
 		<div id="head">
 		</div>
-		<div id="menu" class="dark">
+		<div id="menu">
 			<span style="font-size:45px;cursor:pointer" onclick="openNav()">&#9776;</span><span class="menu">MENU</span>
 		</div>
 
-		<!-- MENU CENTER -->
-		<div id="logo" class="logo">
-			<a href="<?php echo get_bloginfo('template_url'); ?>" >
-			<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png"-->
-		</a>
-		</div>
 
 		<!-- MENU RIGHT -->
 		<div id="lingue">
-			<a href="/?lang=it" class="dark">IT</a>
-			<span class="pipe dark"></span>
-			<a href="/?lang=en" class="dark">EN</a>
+			<a href="?lang=it" <?php if ($LANG == 'it') { echo "class='active'"; } ?> >IT</a>
+			<span class="pipe"></span>
+			<a href="?lang=en" <?php if ($LANG == 'en') { echo "class='active'"; } ?> >EN</a>
 		</div>
 
-		<!-- BOTTOM -->
-		<div id="mouse" class="mouse hide-for-small-only">
-			<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/mouse.png">
-		</div>
+
 
 		<!-- LOGIN -->
 		<div id="login" class="hide-for-small-only">
@@ -73,10 +68,18 @@
 		</div>
 
 		<nav id="myNav" class="overlay">
+			<div id="logomenu">
+			  <a href="/restyle">
+			  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png">
+			  </a>
+			</div>
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		  <div class="overlay-content">
 				<?php get_template_part( 'template-parts/menu' ); ?>
 		  </div>
+			<div id="sponsormenu">
+			  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/sponsor.png" />
+			</div>
 		</nav>
 
 		<?php do_action( 'foundationpress_after_header' );

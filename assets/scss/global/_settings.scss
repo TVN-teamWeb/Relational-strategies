@@ -55,7 +55,9 @@ $foundation-palette: (
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
-);
+);video::-internal-media-controls-download-button {
+    display:none;
+}
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -618,3 +620,9 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+@mixin centerVert($size,$margin){
+  margin: calc(18vh - #{$margin}) auto;
+  height: $size;
+  line-height: $size;
+}
