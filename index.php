@@ -135,7 +135,7 @@
   <!-- Slider loghi -->
   <div class="content">
         <div class="text-center"><b>Powered by</b></div>
-        <br/>
+
         <div class="row">
           <div class="column small-12">
 
@@ -172,9 +172,47 @@
                       ?>
             </div>
         </div>
+
+        <br/><br/>
+        <div class="text-center"><b>In partnership with</b></div>
+
+          <div class="row">
+            <div class="column small-12">
+
+              <?php $args = array(
+                    'post_type' => 'sponsor',
+                    'posts_per_page' => 12,
+                    'cat' => 11,
+                    'orderby' => 'modified'
+                  );
+
+                  $sponsor = new WP_Query( $args );
+
+                  if ( $sponsor->have_posts() ) :
+                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
+
+                    $link = get_field('link');
+                    $img = get_field('immagine');
+
+                    ?>
+
+
+                      <a href="<?php echo $link; ?>" target="_blank" class="sponsor-logo">
+                        <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
+                      </a>
+
+
+                    <?php
+                      endwhile;
+                      endif;
+                      wp_reset_postdata();
+
+                      ?>
+          </div>
+        </div>
         <br/><br/>
         <div class="text-center"><b>Sponsor</b></div>
-        <br/>
+
         <div class="row">
           <div class="column small-12">
 
@@ -210,45 +248,8 @@
             </div>
         </div>
         <br/><br/>
-        <div class="text-center"><b>In partnership with</b></div>
-        <br/>
-          <div class="row">
-            <div class="column small-12">
-
-              <?php $args = array(
-                    'post_type' => 'sponsor',
-                    'posts_per_page' => 12,
-                    'cat' => 11
-                  );
-
-                  $sponsor = new WP_Query( $args );
-
-                  if ( $sponsor->have_posts() ) :
-                    while ( $sponsor->have_posts() ) : $sponsor->the_post();
-
-                    $link = get_field('link');
-                    $img = get_field('immagine');
-
-                    ?>
-
-
-                      <a href="<?php echo $link; ?>" target="_blank" class="sponsor-logo">
-                        <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
-                      </a>
-
-
-                    <?php
-                      endwhile;
-                      endif;
-                      wp_reset_postdata();
-
-                      ?>
-          </div>
-        </div>
-
-        <br/><br/>
         <div class="text-center"><b>Partner tecnici</b></div>
-        <br/>
+
           <div class="row">
             <div class="column small-12">
               <?php $args = array(

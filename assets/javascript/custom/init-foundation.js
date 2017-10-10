@@ -29,6 +29,11 @@ $(window).scroll(function(){
       $('.content h1').eq(0).addClass('is-showing'); // Titolo
       $('.content button').addClass('is-showing'); //Bottone
       $('.center .prova').addClass('is-active'); //Bottone
+      $('#logo').css('display', 'none');
+      $('#sponsor').css('display', 'none');
+    } else {
+      $('#logo').css('display', 'block');
+      $('#sponsor').css('display', 'block');
     }
 
     var BOX_VIDEO = $('.box-about').eq(0).offset().top + 120;
@@ -87,7 +92,9 @@ $(window).scroll(function(){
     var LOGO = $('.sfondo-about').offset().top + parseInt($('.sfondo-about').css("height"));
     if( POS > LOGO )  {
       $('.logo').addClass('is-hide');
+
     }else{
+
       $('.logo').removeClass('is-hide');
     }
 

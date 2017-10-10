@@ -10017,8 +10017,8 @@ button, .button {
   z-index: 100;
   margin: 0 auto;
   text-align: center;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out; }
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out; }
   @media screen and (min-width: 75em) {
     #logo {
       width: 400px;
@@ -10785,7 +10785,7 @@ button, .button {
             font-weight: bold;
             font-size: 0.9em; }
   #fullpage .section.sponsors .fp-tableCell {
-    background-color: #f7f7f7;
+    background-color: #fff;
     vertical-align: inherit;
     height: 180px; }
     #fullpage .section.sponsors .fp-tableCell .content {
@@ -10793,7 +10793,8 @@ button, .button {
       text-align: center;
       padding: 2% 5%; }
     #fullpage .section.sponsors .fp-tableCell .sponsor-logo img {
-      margin: 4px; }
+      margin: 5px;
+      width: 110px; }
 
 a.prova {
   position: relative;

@@ -58,7 +58,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
 
   margin: 0 auto;
   text-align: center;
-  transition: all 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 
 
   @include breakpoint(xlarge) {
@@ -942,7 +942,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
   // sponsor
   .section.sponsors {
     .fp-tableCell{
-      background-color: #f7f7f7;
+      background-color: #fff;
       vertical-align: inherit;
       height: 180px;
       .content{
@@ -954,7 +954,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
 
 
       .sponsor-logo {
-        img { margin: 4px; }
+        img { margin: 5px; width: 110px; }
       }
 
   }
