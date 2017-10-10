@@ -8459,7 +8459,7 @@ a.thumbnail {
   margin-top: 1.5%; }
   #logomenu img {
     width: auto;
-    height: 12vh; }
+    height: 17vh; }
 
 #sponsormenu {
   width: 100%;
@@ -10787,15 +10787,13 @@ button, .button {
   #fullpage .section.sponsors .fp-tableCell {
     background-color: #f7f7f7;
     vertical-align: inherit;
-    height: 180px;
-    /*.sponsors {
-        width: 100%;
-        background-color: #f7f7f7;
-        padding: 5% 10% 0 10%;
-      }*/ }
+    height: 180px; }
     #fullpage .section.sponsors .fp-tableCell .content {
-      width: 100%;
+      font-family: "Conv_ITCAvantGardeStd-Bold";
+      text-align: center;
       padding: 2% 5%; }
+    #fullpage .section.sponsors .fp-tableCell .sponsor-logo img {
+      margin: 4px; }
 
 a.prova {
   position: relative;

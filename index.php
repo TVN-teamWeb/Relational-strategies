@@ -13,7 +13,7 @@
   <div class="section hp" id="section-1">
     <div class="claim bounce-in long-delay" id="claim" data-toggler data-animate="scale-in-up">
       <a href="http://entry.relationalstrategiesgrandprix.com/" target="_blank">
-        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/claim.png" />
+        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/claim_<?php echo $LANG; ?>.png" />
       </a>
     </div>
 
@@ -134,10 +134,10 @@
 <div class="section sponsors fp-normal-scroll fp-auto-height">
   <!-- Slider loghi -->
   <div class="content">
-    <div class="row">
-      <div class="small-12 medium-6">
-        <div class="text-left"><b>Powered by</b></div>
-        <div class="responsive slider">
+        <div class="text-center"><b>Powered by</b></div>
+        <br/>
+        <div class="row">
+          <div class="column small-12">
 
               <?php $args = array(
                     'post_type' => 'sponsor',
@@ -147,7 +147,6 @@
 
                   $sponsor = new WP_Query( $args );
 
-                  $i=0;
 
                   if ( $sponsor->have_posts() ) :
                     while ( $sponsor->have_posts() ) : $sponsor->the_post();
@@ -155,13 +154,14 @@
                     $link = get_field('link');
                     $img = get_field('immagine');
 
+
                     ?>
 
-                    <div>
-                      <a href="<?php echo $link; ?>" target="_blank">
+
+                      <a href="<?php echo $link; ?>" target="_blank" class="sponsor-logo">
                         <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
                       </a>
-                    </div>
+
 
                     <?php
 
@@ -170,13 +170,13 @@
                       wp_reset_postdata();
 
                       ?>
-
+            </div>
         </div>
-
-      </div>
-      <div class="small-12 medium-6">
-        <div class="text-left"><b>Sponsor</b></div>
-        <div class="responsive slider">
+        <br/><br/>
+        <div class="text-center"><b>Sponsor</b></div>
+        <br/>
+        <div class="row">
+          <div class="column small-12">
 
               <?php $args = array(
                     'post_type' => 'sponsor',
@@ -186,7 +186,6 @@
 
                   $sponsor = new WP_Query( $args );
 
-                  $i=0;
 
                   if ( $sponsor->have_posts() ) :
                     while ( $sponsor->have_posts() ) : $sponsor->the_post();
@@ -196,11 +195,10 @@
 
               ?>
 
-              <div>
                 <a href="<?php echo $link; ?>" target="_blank">
                   <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
                 </a>
-              </div>
+
 
               <?php
 
@@ -209,15 +207,13 @@
                 wp_reset_postdata();
 
               ?>
-
+            </div>
         </div>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="small-12 medium-6">
-        <div class="text-left"><b>In partnership with</b></div>
-        <div class="responsive slider">
+        <br/><br/>
+        <div class="text-center"><b>In partnership with</b></div>
+        <br/>
+          <div class="row">
+            <div class="column small-12">
 
               <?php $args = array(
                     'post_type' => 'sponsor',
@@ -227,8 +223,6 @@
 
                   $sponsor = new WP_Query( $args );
 
-                  $i=0;
-
                   if ( $sponsor->have_posts() ) :
                     while ( $sponsor->have_posts() ) : $sponsor->the_post();
 
@@ -237,26 +231,26 @@
 
                     ?>
 
-                    <div>
-                      <a href="<?php echo $link; ?>" target="_blank">
+
+                      <a href="<?php echo $link; ?>" target="_blank" class="sponsor-logo">
                         <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
                       </a>
-                    </div>
+
 
                     <?php
-
                       endwhile;
                       endif;
                       wp_reset_postdata();
 
                       ?>
-
+          </div>
         </div>
-      </div>
-      <div class="small-12 medium-6">
-        <div class="text-left"><b>Partner tecnici</b></div>
-        <div class="responsive slider">
 
+        <br/><br/>
+        <div class="text-center"><b>Partner tecnici</b></div>
+        <br/>
+          <div class="row">
+            <div class="column small-12">
               <?php $args = array(
                     'post_type' => 'sponsor',
                     'posts_per_page' => 12,
@@ -265,7 +259,7 @@
 
                   $sponsor = new WP_Query( $args );
 
-                  $i=0;
+
 
                   if ( $sponsor->have_posts() ) :
                     while ( $sponsor->have_posts() ) : $sponsor->the_post();
@@ -273,13 +267,15 @@
                     $link = get_field('link');
                     $img = get_field('immagine');
 
+
+
                     ?>
 
-                    <div>
-                      <a href="<?php echo $link; ?>" target="_blank">
+
+                      <a href="<?php echo $link; ?>" target="_blank" class="sponsor-logo">
                         <img src="<?php echo $img['sizes']['sponsor-thumb']; ?>" />
                       </a>
-                    </div>
+
 
                     <?php
 
@@ -288,21 +284,12 @@
                       wp_reset_postdata();
 
                       ?>
-
+          </div>
         </div>
-      </div>
 
-
-
-
-
-
-    </div>
   </div>
 
-    </div>
 
-</div>
 
 </div>
 <?php get_footer();

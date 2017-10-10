@@ -101,7 +101,7 @@ $(window).scroll(function(){
 $(document).ready(function() {
   $('#claim').foundation('toggle');
   $('#fullpage').fullpage({
-    anchors: ['hp','il-premio', 'la-giuria', 'winner', 'winners'],
+    anchors: ['hp','il-premio', 'la-giuria', 'winner', 'winners', 'sponsors'],
     sectionsColor: ['#f7f7f7','#f7f7f7', '#f7f7f7', '#282828', '#282828'],
     hybrid:true,
     fitToSection: false,

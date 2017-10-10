@@ -6,16 +6,16 @@ $(document).on('ready', function() {
       speed: 800,
       autoplay:true,
       autoplaySpeed:2000,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToShow: 4,
+      slidesToScroll: 0,
       variableWidth: true,
       responsive: [
         {
           breakpoint: 1500,
           settings: {
             arrows:false,
-            slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToShow: 4,
+            slidesToScroll: 0,
             infinite: false,
             autoplay:true,
             autoplaySpeed:2000
@@ -25,8 +25,8 @@ $(document).on('ready', function() {
           breakpoint: 1200,
           settings: {
             arrows:false,
-            slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToShow: 4,
+            slidesToScroll: 0,
             infinite: false,
             autoplay:true,
             autoplaySpeed:2000
@@ -36,8 +36,8 @@ $(document).on('ready', function() {
           breakpoint: 1024,
           settings: {
             arrows:false,
-            slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToShow: 4,
+            slidesToScroll: 0,
             infinite: false,
             autoplay:true,
             autoplaySpeed:2000

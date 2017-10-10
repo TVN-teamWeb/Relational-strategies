@@ -946,16 +946,17 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
       vertical-align: inherit;
       height: 180px;
       .content{
-        width: 100%;
+        font-family:"Conv_ITCAvantGardeStd-Bold";
+        text-align: center;
         padding: 2% 5%;
 
       }
 
-      /*.sponsors {
-        width: 100%;
-        background-color: #f7f7f7;
-        padding: 5% 10% 0 10%;
-      }*/
+
+      .sponsor-logo {
+        img { margin: 4px; }
+      }
+
   }
 }
 
