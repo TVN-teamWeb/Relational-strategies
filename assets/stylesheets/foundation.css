@@ -10018,7 +10018,13 @@ button, .button {
   margin: 0 auto;
   text-align: center;
   -webkit-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out; }
+  transition: opacity 0.4s ease-in-out;
+  width: 250px;
+  top: 30px; }
+  @media print, screen and (min-width: 40em) {
+    #logo {
+      width: 350px;
+      top: 30px; } }
   @media screen and (min-width: 75em) {
     #logo {
       width: 400px;
@@ -10110,7 +10116,7 @@ button, .button {
   top: 50%;
   margin-top: 125px;
   display: none; }
-  @media print, screen and (min-width: 40em) {
+  @media print, screen and (min-width: 64em) {
     #login {
       left: 2%;
       display: block; } }
@@ -10172,7 +10178,6 @@ button, .button {
   width: 12px;
   text-align: center;
   margin-top: 125px;
-  display: block;
   display: none;
   /*.icons{
     padding-top: 10px;
@@ -10214,7 +10219,7 @@ button, .button {
 
 #fullpage {
   z-index: 97;
-  background-color: #f7f7f7; }
+  background-color: #fff; }
   #fullpage .section.hp {
     background-image: url("../images/bck-hp.jpg");
     -webkit-background-size: cover;
@@ -10258,7 +10263,7 @@ button, .button {
       background-repeat: no-repeat;
       background-position: top;
       margin-bottom: 30px;
-      height: 18%;
+      height: 24%;
       /*@include breakpoint(small){
           height: 540px;
         }
@@ -10274,6 +10279,9 @@ button, .button {
         @include breakpoint(xxlarge){
           height: 870px;
         }*/ }
+      @media print, screen and (min-width: 40em) {
+        #fullpage .section.about .fp-tableCell .sfondo-about {
+          height: 18%; } }
       @media print, screen and (min-width: 64em) {
         #fullpage .section.about .fp-tableCell .sfondo-about {
           height: 36%; } }
@@ -10674,7 +10682,10 @@ button, .button {
         bottom: 7px;
         left: 63px;
         white-space: nowrap;
-        overflow: hidden; }
+        overflow: hidden;
+        background-color: #f7f7f7;
+        bottom: 0;
+        left: 0; }
         #fullpage .section.winner .fp-tableCell .content .box-winner .info h3 {
           text-transform: uppercase;
           color: #cd1726;
@@ -10685,7 +10696,8 @@ button, .button {
             #fullpage .section.winner .fp-tableCell .content .box-winner .info h3 {
               font-size: 1.5em; } }
         #fullpage .section.winner .fp-tableCell .content .box-winner .info p {
-          font-size: .9em; }
+          font-size: .9em;
+          text-align: left; }
           @media screen and (min-width: 75em) {
             #fullpage .section.winner .fp-tableCell .content .box-winner .info p {
               font-size: 1em; } }

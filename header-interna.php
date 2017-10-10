@@ -49,7 +49,11 @@
 		<!-- LOGIN -->
 		<div id="login" class="hide-for-small-only">
 			<div class="vertical-text dark">
-				<span class="login dark"><a href="#" class="dark">login</a></span>/<span class="registry dark"><a href="#" class="dark">regitrazione</a></span>
+				<span class="registry dark">
+					<a href="http://entry.relationalstrategiesgrandprix.com" target="_blank "class="dark">
+						<?php if ($LANG == 'en') { echo "enter"; } else { echo "regitrazione"; }?>
+					</a>
+				</span>
 			</div>
 		</div>
 

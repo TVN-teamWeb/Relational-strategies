@@ -60,6 +60,15 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
   text-align: center;
   transition: opacity 0.4s ease-in-out;
 
+  @include breakpoint(small) {
+    width: 250px;
+    top: 30px;
+  }
+
+  @include breakpoint(medium) {
+    width: 350px;
+    top: 30px;
+  }
 
   @include breakpoint(xlarge) {
     width: 400px;
@@ -168,7 +177,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
   width: 12px;
   top: 50%;
   margin-top: 125px;
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     left: 2%;
     display: block;
   }
@@ -238,7 +247,6 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
   width: 12px;
   text-align: center;
   margin-top: 125px;
-  display: block;
   @include breakpoint(medium) {
     right: 2%;
     display: block;
@@ -281,7 +289,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
 
 #fullpage{
   z-index: 97;
-  background-color: #f7f7f7;
+  background-color: #fff;
   // Prima fascia //
   .section.hp{
     background-image: url('../images/bck-hp.jpg');
@@ -344,6 +352,10 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
         margin-bottom: 30px;
 
         @include breakpoint(small){
+          height: 24%;
+        }
+
+        @include breakpoint(medium){
           height: 18%;
         }
 
@@ -802,6 +814,10 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
               left: 63px;
               white-space: nowrap;
               overflow: hidden;
+              @include breakpoint(small){
+                background-color: #f7f7f7;
+                bottom: 0; left: 0;
+              }
                 h3{
                   text-transform: uppercase;
                   color:#cd1726;
@@ -820,6 +836,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
 
                   @include breakpoint(small){
                     font-size: .9em;
+                    text-align: left;
                   }
                   @include breakpoint(xlarge){
                     font-size: 1em;

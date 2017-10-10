@@ -111,7 +111,7 @@
   </div>
 
 
-  <div class="section winner">
+  <div class="section winner fp-auto-height">
     <div class="content">
       <h1>GRANDPRIX 2016</h1>
       <?php $CDN = "http://wpc.6f93.edgecastcdn.net/806F93/media.televisionet.tv/video/grandprix/relationalstrategies/";

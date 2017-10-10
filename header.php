@@ -63,7 +63,11 @@
 <!-- LOGIN -->
 <div id="login" class="hide-for-small-only">
 	<div class="vertical-text">
-		<span class="login"><a href="#">login</a></span>/<span class="registry"><a href="#">regitrazione</a></span>
+		<span class="registry">
+			<a href="http://entry.relationalstrategiesgrandprix.com" target="_blank">
+			 <?php if ($LANG == 'en') { echo "enter"; } else { echo "regitrazione"; }?>
+			 </a>
+		</span>
 	</div>
 </div>
 

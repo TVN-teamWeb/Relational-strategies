@@ -29,11 +29,9 @@ $(window).scroll(function(){
       $('.content h1').eq(0).addClass('is-showing'); // Titolo
       $('.content button').addClass('is-showing'); //Bottone
       $('.center .prova').addClass('is-active'); //Bottone
-      $('#logo').css('display', 'none');
-      $('#sponsor').css('display', 'none');
+      $('.is-hide').css('display', 'none');
     } else {
-      $('#logo').css('display', 'block');
-      $('#sponsor').css('display', 'block');
+      $('.is-hide').css('display', 'block');
     }
 
     var BOX_VIDEO = $('.box-about').eq(0).offset().top + 120;
