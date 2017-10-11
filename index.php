@@ -23,24 +23,45 @@
   <div class="section about fp-normal-scroll" id="section-2">
     <div class="sfondo-about">
       <div class="content">
+        <?php if ($LANG == 'en') { ?>
         <h1 class="text"> 
-          <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">IL PREMIO DEDICATO ALLE TECNICHE PIÙ INNOVATIVE</div>
-          </div>
-          <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">ED EFFICACI DEL RELATIONAL MARKETING:</div>
-          </div>
-          <div class="curtain-txt-box">
-            <div class="curtain-txt txt-bold">DIGITAL, DM, PR, DIGITAL, EVENTS, BRANDED CONTENT E PROMO.</div>
-          </div>
-        </h1>
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">The award dedicated to the most innovative</div>
+            </div>
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">and effective techniques of relationship MARKETING:</div>
+            </div>
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">DIGITAL, DM, PR, DIGITAL, EVENTS, BRANDED CONTENT AND PROMO.</div>
+            </div>
+          </h1>
 
-        <p>Un Evento sempre in movimento, capace di rinnovarsi di volta in volta per seguire
-          l’evoluzione del mercato ed essere sempre attuale...</p>
-  <!-- button type="button" name="button" class="alert">edizione 2016</button -->
-        <div class="center">
-          <a class="prova" href="il-premio">Scopri di più</a>
-        </div>
+          <p>An event always on the move, able to renew itself each time,
+            so as to follow the evolution of the market and to always be up-to-date.</p>
+
+          <div class="center">
+            <a class="prova" href="il-premio">Find out more</a>
+          </div>
+        <?php } else  { ?>
+          <h1 class="text"> 
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">IL PREMIO DEDICATO ALLE TECNICHE PIÙ INNOVATIVE</div>
+            </div>
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">ED EFFICACI DEL RELATIONAL MARKETING:</div>
+            </div>
+            <div class="curtain-txt-box">
+              <div class="curtain-txt txt-bold">DIGITAL, DM, PR, DIGITAL, EVENTS, BRANDED CONTENT E PROMO.</div>
+            </div>
+          </h1>
+
+          <p>Un Evento sempre in movimento, capace di rinnovarsi di volta in volta per seguire
+            l’evoluzione del mercato ed essere sempre attuale...</p>
+
+          <div class="center">
+            <a class="prova" href="il-premio">Scopri di più</a>
+          </div>
+        <?php }  ?>
       </div>
 
     </div>
@@ -53,7 +74,12 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-01.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">Interviste ai vincitori 2016</p>
+          <p class="title appear-txt">
+            <p class="title appear-txt">
+              <?php if ($LANG == 'en') {
+                echo "Winners 2016";
+              } else { echo "Interviste ai vincitori 2016"; } ?>
+            </p>
         </div>
       </div>
       <?php $video = "RELATIONAL-SERATA-PARTNER-2016.mp4"; ?>
@@ -62,7 +88,12 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-02.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">La parola ai partner 2016</p>
+          <p class="title appear-txt">
+            <?php if ($LANG == 'en') {
+              echo "Partners 2016";
+            } else { echo "La parola ai partner 2016"; } ?>
+
+          </p>
         </div>
       </div>
       <?php $video = "RELATIONAL-GIURIA-TOTALE-2016.mp4"; ?>
@@ -71,7 +102,11 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-03.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">Giuria 2016</p>
+          <p class="title appear-txt">
+            <?php if ($LANG == 'en') {
+              echo "Jury 2016";
+            } else { echo "Giuria 2016"; } ?>
+          </p>
         </div>
       </div>
       <?php $video = "tutti i lavori__audio_1 (1).mp4"; ?>
@@ -80,7 +115,11 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-04.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">Tutti i lavori 2016</p>
+          <p class="title appear-txt">
+            <?php if ($LANG == 'en') {
+              echo "Entries 2016";
+            } else { echo "Tutti i lavori 2016"; } ?>
+          </p>
         </div>
       </div>
     </div>
@@ -106,7 +145,10 @@
 
     </div>
     <a class="button" name="button" href="<?php echo get_page_link(3751); ?>" >
-      Tutti i giurati
+      <?php if ($LANG == 'en') {
+        echo "All the jurors";
+      } else { echo "Tutti i giurati"; } ?>
+
     </a>
   </div>
 
@@ -248,7 +290,14 @@
             </div>
         </div>
         <br/><br/>
-        <div class="text-center"><b>Partner tecnici</b></div>
+        <div class="text-center">
+          <b>
+            <?php if ($LANG == 'en') {
+              echo "Tecnichal partners";
+            } else { echo "Partner tecnici"; } ?>
+
+          </b>
+        </div>
 
           <div class="row">
             <div class="column small-12">

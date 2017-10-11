@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Giuria
+Template Name: Giuria 2017
 */
 get_template_part( 'header-interna' );
 the_post();
@@ -26,7 +26,7 @@ the_post();
           <?php
           $args = array(
               'post_type' => 'giuria',
-              'cat' => 3,
+              'cat' => 4,
               'posts_per_page' => 30,
               'orderby' => 'name',
               'order' => 'ASC'
