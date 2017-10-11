@@ -10263,7 +10263,7 @@ button, .button {
       background-repeat: no-repeat;
       background-position: top;
       margin-bottom: 30px;
-      height: 24%;
+      height: 27%;
       /*@include breakpoint(small){
           height: 540px;
         }
@@ -10284,7 +10284,7 @@ button, .button {
           height: 18%; } }
       @media print, screen and (min-width: 64em) {
         #fullpage .section.about .fp-tableCell .sfondo-about {
-          height: 36%; } }
+          height: 35%; } }
       @media screen and (min-width: 93.75em) {
         #fullpage .section.about .fp-tableCell .sfondo-about {
           height: 72%; } }

@@ -76,7 +76,7 @@
 	<div class="vertical-text">
 		<span class="login">social</span>
 			<a href="https://www.facebook.com/RelationalStrategiesGrandPrix/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://twitter.com/GrandPrixTVN" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 	</div>
 	<!-- img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/social.png">
 	<div class="icons">
@@ -88,7 +88,7 @@
 <nav id="myNav" class="overlay">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<div id="logomenu">
-	  <a href="/restyle">
+	  <a href="/">
 	  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png">
 	  </a>
 	</div>

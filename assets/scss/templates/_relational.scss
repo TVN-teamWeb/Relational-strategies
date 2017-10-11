@@ -352,7 +352,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
         margin-bottom: 30px;
 
         @include breakpoint(small){
-          height: 24%;
+          height: 27%;
         }
 
         @include breakpoint(medium){
@@ -360,7 +360,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
         }
 
         @include breakpoint(large){
-          height: 36%;
+          height: 35%;
         }
 
         @include breakpoint(xxlarge){
@@ -598,7 +598,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
             background-image: url('../images/bck-giuria-landscape.jpg');
           }
 
-          @include breakpoint(xlarge up){
+          @include breakpoint(xlarge){
             height: 700px !important;
           }
 

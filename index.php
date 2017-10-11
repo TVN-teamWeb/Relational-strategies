@@ -75,8 +75,7 @@
         </div>
         <div class="appear-box">
           <p class="title appear-txt">
-            <p class="title appear-txt">
-              <?php if ($LANG == 'en') {
+          <?php if ($LANG == 'en') {
                 echo "Winners 2016";
               } else { echo "Interviste ai vincitori 2016"; } ?>
             </p>
@@ -88,8 +87,7 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-02.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">
-            <?php if ($LANG == 'en') {
+          <p class="title appear-txt"><?php if ($LANG == 'en') {
               echo "Partners 2016";
             } else { echo "La parola ai partner 2016"; } ?>
 
@@ -102,8 +100,7 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-03.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">
-            <?php if ($LANG == 'en') {
+          <p class="title appear-txt"><?php if ($LANG == 'en') {
               echo "Jury 2016";
             } else { echo "Giuria 2016"; } ?>
           </p>
@@ -115,8 +112,7 @@
           <img class="foto curtain-img" src="<?php echo get_bloginfo('template_url'); ?>/assets/images/video-04.jpg" />
         </div>
         <div class="appear-box">
-          <p class="title appear-txt">
-            <?php if ($LANG == 'en') {
+          <p class="title appear-txt"><?php if ($LANG == 'en') {
               echo "Entries 2016";
             } else { echo "Tutti i lavori 2016"; } ?>
           </p>

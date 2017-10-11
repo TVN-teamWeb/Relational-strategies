@@ -61,8 +61,8 @@
 		<div id="social" class="hide-for-small-only">
 			<div class="vertical-text">
 				<span class="login dark">social</span>
-					<a href="#"><i class="fa fa-facebook dark" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-twitter dark" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/RelationalStrategiesGrandPrix/"><i class="fa fa-facebook dark" aria-hidden="true"></i></a>
+					<a href="https://twitter.com/GrandPrixTVN"><i class="fa fa-twitter dark" aria-hidden="true"></i></a>
 			</div>
 			<!-- img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/social.png">
 			<div class="icons">
@@ -73,7 +73,7 @@
 
 		<nav id="myNav" class="overlay">
 			<div id="logomenu">
-			  <a href="/restyle">
+			  <a href="/">
 			  <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png">
 			  </a>
 			</div>
