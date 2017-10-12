@@ -172,7 +172,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
 
 #login{
   position: fixed;
-  z-index: 98;
+  z-index: 105;
   left: 3%;
   width: 12px;
   top: 50%;
@@ -592,6 +592,7 @@ button, .button{ font-size: 2em; border: 2px solid #fff; padding: 1% 4%; color: 
           background-repeat: no-repeat;
           background-position: center;
           vertical-align: middle;
+
 
           @include breakpoint(large down) {
             height: 400px !important;
@@ -1155,6 +1156,7 @@ a.prova.is-active:after{
   background-color: #fff;
   @include breakpoint(small only) {
     padding: 5px;
+    margin-top: 120px;
   }
 }
 

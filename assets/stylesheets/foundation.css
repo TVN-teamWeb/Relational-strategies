@@ -8452,14 +8452,21 @@ a.thumbnail {
   -webkit-background-size: cover;
           background-size: cover;
   z-index: 99; }
+  @media screen and (max-width: 39.9375em) {
+    #head {
+      height: 120px; } }
 
 #logomenu {
   width: 100%;
   text-align: center;
-  margin-top: 1.5%; }
+  margin-top: 11px; }
   #logomenu img {
     width: auto;
     height: 17vh; }
+  @media screen and (max-width: 39.9375em) {
+    #logomenu img {
+      width: 210px;
+      height: auto; } }
 
 #sponsormenu {
   width: 100%;
@@ -8558,15 +8565,19 @@ a.thumbnail {
   right: 45px;
   font-size: 60px;
   color: #fff; }
+  @media screen and (max-width: 39.9375em) {
+    .overlay .closebtn {
+      right: 15px;
+      top: 0; } }
 
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px; }
+/*@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
-    right: 35px; } }
-
+    right: 15px;
+  }
+}*/
 .main-wrap {
   max-width: 75rem;
   margin-right: auto;
@@ -10110,7 +10121,7 @@ button, .button {
 
 #login {
   position: fixed;
-  z-index: 98;
+  z-index: 105;
   left: 3%;
   width: 12px;
   top: 50%;
@@ -10992,7 +11003,8 @@ a.prova.is-active:after {
   background-color: #fff; }
   @media screen and (max-width: 39.9375em) {
     #interna {
-      padding: 5px; } }
+      padding: 5px;
+      margin-top: 120px; } }
 
 .entry-content, .page {
   width: 100%; }

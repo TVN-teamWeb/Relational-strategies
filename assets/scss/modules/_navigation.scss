@@ -72,13 +72,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 99;
+  @include breakpoint(small only) {
+    height: 120px;
+  }
 }
 
 #logomenu {
   width: 100%;
   text-align: center;
-  margin-top: 1.5%;
+  margin-top: 11px;
   img { width: auto; height: 17vh; }
+  @include breakpoint(small only) {
+    img { width: 210px; height: auto;  }
+  }
 
 
 }
@@ -195,14 +201,19 @@
     right: 45px;
     font-size: 60px;
     color: #fff;
+    @include breakpoint(small only) {
+      right: 15px;
+      top: 0;
+    }
+
 }
 
 
-@media screen and (max-height: 450px) {
+/*@media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
-    right: 35px;
+    right: 15px;
   }
-}
+}*/
